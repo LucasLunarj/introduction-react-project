@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green-: #00875f;
+  --light-green: #00b37e;
+
+  --gray-1: #121214; /* Background */
+  --gray-2: #202024; /* Cards */
+  --gray-3: #323238; /* Divider */
+  --gray-4: #7c7c8a; /* PlaceHolder */
+  --gray-5: #8d8d99; /*text-apoio*/
+  --gray-6: #c4c4cc; /* text */
+  --gray-7: #e1e1e6; /* Text-titles */
+
+  --white: #fff;
+  --red-danger: #f75a68;
+}
