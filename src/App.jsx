@@ -1,10 +1,16 @@
 // Components
 import { Header } from './components/Header/Header'
+import { Card } from './components/Card/Card'
+
 export const App = () => {
   return (
     <div>
-      <h1>test</h1>
-      <Header />
+      <header>
+        <Header />
+      </header>
+      <aside>
+        <Card />
+      </aside>
     </div>
   )
 }

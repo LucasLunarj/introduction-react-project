@@ -1,0 +1,93 @@
+.container {
+  background: var(--gray-2);
+  width: 256px;
+  height: 294px;
+  margin: 32px 0px 0px 160px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  gap: 30px;
+  text-align: center;
+  font-family: Roboto;
+}
+.content h1 {
+  font-size: 16px;
+}
+.content p {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: lighter;
+  line-height: 160%;
+}
+
+.bannerContent {
+  position: relative;
+}
+.profileBorder {
+  width: 60px;
+  height: 60px;
+}
+.profilePicture {
+  height: 60px;
+  width: 60px;
+  background: var(--gray-2);
+
+  object-fit: cover;
+  border-radius: 8px;
+
+  padding: 3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid var(--light-green);
+
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  margin: 0 auto;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  border: 1px solid var(--gray-3);
+}
+
+.content button {
+  font-family: Roboto, sans-serif;
+  color: var(--light-green);
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border: 1px solid var(--light-green);
+  border-radius: 8px;
+
+  background: none;
+  padding: 16px 24px 14px 24px;
+
+  display: flex;
+  gap: 10px;
+}
+
+.content button:hover {
+  border: none;
+  background: var(--green);
+  color: var(--white);
+}
+
+.content button img:hover {
+  color: var(--white);
+}

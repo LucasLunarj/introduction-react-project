@@ -1,4 +1,19 @@
-.test {
-  background-color: black;
-  height: 10px;
+.container {
+  width: 100%;
+  padding: 20px 0px 19.235px 0px;
+  background: var(--gray-2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header img {
+  width: 64.083px;
+  height: 60.765px;
 }
