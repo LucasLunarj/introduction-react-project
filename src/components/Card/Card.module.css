@@ -67,10 +67,8 @@
 }
 
 .content button {
-  font-family: Roboto, sans-serif;
   color: var(--light-green);
-  font-size: 16px;
-  font-weight: bold;
+
   border: none;
   border: 1px solid var(--light-green);
   border-radius: 8px;
@@ -80,6 +78,10 @@
 
   display: flex;
   gap: 10px;
+}
+.content button p {
+  font-weight: 700;
+  font-style: normal;
 }
 
 .content button:hover {
