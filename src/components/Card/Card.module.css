@@ -2,7 +2,7 @@
   background: var(--gray-2);
   width: 256px;
   height: 294px;
-  margin: 32px 0px 0px 160px;
+  /* margin: 32px 0px 0px 160px; */
   border-radius: 8px;
   overflow: hidden;
 }
@@ -27,6 +27,7 @@
   font-style: normal;
   font-weight: lighter;
   line-height: 160%;
+  color: var(--gray-5);
 }
 
 .bannerContent {
@@ -88,8 +89,13 @@
   border: none;
   background: var(--green);
   color: var(--white);
+  cursor: pointer;
 }
 
-.content button img:hover {
-  color: var(--white);
+/* Mobile */
+@media (max-width: 700px) {
+  .container {
+    margin-top: 10px;
+    margin: 10px auto 0;
+  }
 }
