@@ -44,8 +44,39 @@
 }
 
 .removeBox button {
-  padding: 12px 32px 12px 32px;
+}
+
+button {
+  display: ;
+}
+
+.buttonBox {
+  padding: 12px 32px;
   margin-right: 2px;
   border-radius: 8px;
   cursor: pointer;
+  display: flex;
+  gap: 8px;
+}
+
+.acceptRemove {
+  padding: 12px 32px;
+  color: var(--red-danger);
+  background-color: #29292e;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.cancelRemove {
+  padding: 12px 32px;
+  border: none;
+  border-radius: 8px;
+  background-color: #29292e;
+  color: var(--white-);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
 }

@@ -7,6 +7,7 @@ import { Post } from './components/Post/Post'
 import './app.css'
 //photos
 import profile from '../src/assets/profile.jpg'
+import nopicture from '../src/assets/no-image.png'
 
 export const App = () => {
   return (
@@ -28,7 +29,9 @@ Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Ret
 👉 jane.design/doctorcare
 
 #novoprojeto #nlw #rocketseat' />
-          <Post name="Devon Lane"
+          <Post
+            profilePicture={nopicture}
+            name="Devon Lane"
             postContent="Fala pessoal 👋
 
            Finalmente finalizei meu novo site/portfólio. Foi um baita desafio criar todo o design e codar na unha, mas consegui 💪🏻 

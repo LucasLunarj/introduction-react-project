@@ -11,7 +11,8 @@ export const Feedback = (props) => {
         < div className={styles.container} >
             <div className={styles.content}>
                 <img src="" alt="" />
-                <li onChange={(e) => console.log(e.target.value)}>
+                <li>
+
                     <div>
                         {/* <h3>Name</h3> */}
                         <p>{props.content}</p>
@@ -24,11 +25,11 @@ export const Feedback = (props) => {
                         <path d="M15.75 5.25V3.75C15.75 3.35218 15.592 2.97064 15.3107 2.68934C15.0294 2.40804 14.6478 2.25 14.25 2.25H9.75C9.35218 2.25 8.97064 2.40804 8.68934 2.68934C8.40804 2.97064 8.25 3.35218 8.25 3.75V5.25" stroke="currentcolor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
 
-                    <div onClick={props.removeItem}>
-                        {props.switchData}
-                    </div>
-                </li>
 
+                </li>
+                <div >
+                    {props.switchData}
+                </div>
             </div>
         </div >
     )

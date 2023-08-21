@@ -27,8 +27,9 @@ export const Post = (props) => {
         console.log(id)
         setGetId(id)
     }
-
-    const switchCheck = switchButton === false ? < Modal /> : null
+    function cancelClick() {
+        setSwitchButton(true)
+    }
 
     const handleAcceptRemove = () => {
         setPostContent(postContent.filter((item) => getID !== item.id))
@@ -36,6 +37,8 @@ export const Post = (props) => {
         setSwitchButton(true)
 
     }
+    const switchCheck = switchButton === false ? < Modal cancelRemove={cancelClick} acceptRemove={handleAcceptRemove} /> : null
+
 
     return (
         <div className={styles.container}>
@@ -69,23 +72,23 @@ export const Post = (props) => {
                     <button disabled={getData.length === 0} onClick={handleClick}>
                         Publicar
                     </button>
-                    <div>
-                        <ul >
-                            {postContent.map((item, index) => {
-                                return <div key={item.lenght}> <Feedback
-                                    key={index}
-                                    content={item.message}
-                                    switch={() => handleSwitch(item.id)}
-                                    switchData={switchCheck}
-                                    removeItem={() => handleAcceptRemove(item.id, item.message)}
-                                />
-                                </div>
 
-                            })}
-                        </ul>
-                    </div>
                 </div>
+                <div>
+                    <ul >
+                        {postContent.map((item, index) => {
+                            return <div key={item.lenght}> <Feedback
+                                key={index}
+                                content={item.message}
+                                switch={() => handleSwitch(item.id)}
+                                switchData={switchCheck}
+                                removeItem={() => handleAcceptRemove(item.id, item.message)}
+                            />
+                            </div>
 
+                        })}
+                    </ul>
+                </div>
             </div>
         </div >
 
