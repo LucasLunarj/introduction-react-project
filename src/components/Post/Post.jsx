@@ -4,11 +4,13 @@ import { Feedback } from '../Feedback/Feedback'
 
 //Styles
 import styles from './Post.module.css'
+import { Modal } from '../Modal/Modal'
 
 export const Post = (props) => {
     const [getData, setGetData] = useState('')
     const [postContent, setPostContent] = useState([])
     const [switchButton, setSwitchButton] = useState(true)
+    const [getID, setGetId] = useState('')
 
     function handleGetData(e) {
         setGetData((e.target.value))
@@ -20,14 +22,17 @@ export const Post = (props) => {
         setGetData('')
     }
 
-    const handleSwitch = () => switchButton === true ? setSwitchButton(false) : setSwitchButton(true);
-
-    const handleRemove = () => setSwitchButton(true)
-    console.log(switchButton)
-
-    const handleAcceptRemove = (id) => {
-        // setPostContent(postContent.filter((item) => id !== item.id))
+    const handleSwitch = (id) => {
+        switchButton === true ? setSwitchButton(false) : setSwitchButton(true);
         console.log(id)
+        setGetId(id)
+    }
+
+    const switchCheck = switchButton === false ? < Modal /> : null
+
+    const handleAcceptRemove = () => {
+        setPostContent(postContent.filter((item) => getID !== item.id))
+
         setSwitchButton(true)
 
     }
@@ -68,12 +73,11 @@ export const Post = (props) => {
                         <ul >
                             {postContent.map((item, index) => {
                                 return <div key={item.lenght}> <Feedback
-                                    key={item.lenght}
+                                    key={index}
                                     content={item.message}
-                                    switch={handleSwitch}
-                                    switchData={switchButton}
-                                    id={item}
-                                    removeItem={() => handleAcceptRemove(item.id)}
+                                    switch={() => handleSwitch(item.id)}
+                                    switchData={switchCheck}
+                                    removeItem={() => handleAcceptRemove(item.id, item.message)}
                                 />
                                 </div>
 

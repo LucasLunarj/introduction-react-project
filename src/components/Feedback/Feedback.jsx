@@ -6,8 +6,8 @@ import styles from './Feedback.module.css'
 
 
 export const Feedback = (props) => {
-    return (
 
+    return (
         < div className={styles.container} >
             <div className={styles.content}>
                 <img src="" alt="" />
@@ -25,7 +25,7 @@ export const Feedback = (props) => {
                     </svg>
 
                     <div onClick={props.removeItem}>
-                        {props.switch === false ? <Modal /> : null}
+                        {props.switchData}
                     </div>
                 </li>
 
