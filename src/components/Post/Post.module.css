@@ -89,10 +89,10 @@
   border-radius: 8px;
   color: var(--white);
 }
-.textArea input:hover {
+.textArea textarea:hover {
   border: 1px solid var(--light-green);
 }
-.textArea input:focus {
+.textArea textarea:focus {
   border: 1px solid var(--light-green);
   outline: none;
 }
