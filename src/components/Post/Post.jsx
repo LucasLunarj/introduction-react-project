@@ -1,7 +1,5 @@
 //Hook
 import { useState } from 'react'
-
-import { Modal } from '../Modal/Modal'
 import { Feedback } from '../Feedback/Feedback'
 
 //Styles
@@ -16,9 +14,9 @@ export const Post = (props) => {
         setGetData((e.target.value))
     }
     console.log(getData)
-    console.log(postContent.length)
+
     function handleClick() {
-        setPostContent([...postContent, { message: getData }])
+        setPostContent([...postContent, { message: getData, id: postContent.length + 1 }])
         setGetData('')
     }
 
@@ -27,7 +25,12 @@ export const Post = (props) => {
     const handleRemove = () => setSwitchButton(true)
     console.log(switchButton)
 
+    const handleAcceptRemove = (id) => {
+        // setPostContent(postContent.filter((item) => id !== item.id))
+        console.log(id)
+        setSwitchButton(true)
 
+    }
 
     return (
         <div className={styles.container}>
@@ -63,13 +66,14 @@ export const Post = (props) => {
                     </button>
                     <div>
                         <ul >
-                            {postContent.map((item) => {
+                            {postContent.map((item, index) => {
                                 return <div key={item.lenght}> <Feedback
                                     key={item.lenght}
                                     content={item.message}
                                     switch={handleSwitch}
+                                    switchData={switchButton}
                                     id={item}
-
+                                    removeItem={() => handleAcceptRemove(item.id)}
                                 />
                                 </div>
 
@@ -77,9 +81,7 @@ export const Post = (props) => {
                         </ul>
                     </div>
                 </div>
-                <div>
-                    {switchButton === false ? <Modal remove={handleRemove} /> : null}
-                </div>
+
             </div>
         </div >
 
