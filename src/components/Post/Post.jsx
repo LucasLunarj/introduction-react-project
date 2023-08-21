@@ -63,12 +63,13 @@ export const Post = (props) => {
                 <div className={styles.divider}></div>
                 <div className={styles.textArea}>
                     <h3>Deixe seu feedback</h3>
-                    <input type="text"
+                    <textarea type="text"
                         placeholder='Escreva um comentário'
                         value={getData}
                         onChange={handleGetData}
                         autoComplete='off'
-                    />
+                    >
+                    </textarea>
                     <button disabled={getData.length === 0} onClick={handleClick}>
                         Publicar
                     </button>
